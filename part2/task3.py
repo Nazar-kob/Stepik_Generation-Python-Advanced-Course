@@ -1,3 +1,4 @@
+# Назад, вперёд и наоборот
 # На вход программе подается строка текста из натуральных чисел.
 # Из элементов строки формируется список чисел. Напишите программу,
 # которая меняет местами соседние элементы списка (a[0] c a[1], a[2] c a[3] и т.д.).
@@ -12,16 +13,15 @@
 # Sample Output 1:
 # 2 1 4 3 5
 
-
-text_input = input().split()
-new_str = ''
-while len(text_input) != 0:
-    element = text_input[:2]
-    for x in element[::-1]:
-        new_str += x
-    text_input = text_input[2:]
-
-print(new_str, sep=' ')
-
+def vice_versa(text_input: str) -> str:
+    text_input = text_input.split()
+    new_str = ''
+    while len(text_input) != 0:
+        element = text_input[:2]
+        for x in element[::-1]:
+            new_str += x
+        text_input = text_input[2:]
+    return new_str
 
 
+print(vice_versa('1 2 3 4 5'), sep=' ')
