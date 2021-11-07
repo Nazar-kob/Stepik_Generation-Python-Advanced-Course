@@ -14,12 +14,12 @@
 # Если таких холодильников нет, ничего выводить не нужно.
 
 
-list_input = [input() for _ in range(int(input()))]
 
-for i in list_input:
-    for x in 'anton':
-        if x not in i:
+for i in range(int(input())):
+    data_input, data, count = input(), 'anton', 0
+    for sym in data_input:
+        if sym == data[count]:
+            count += 1
+        if count == 5:
+            print(i + 1, end=' ')
             break
-    else:
-        print(list_input.index(i))
-

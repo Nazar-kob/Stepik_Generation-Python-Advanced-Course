@@ -13,8 +13,7 @@
 # Sample Output 1:
 # 3
 
-string_text = 'ОООООООООО'
-print(max(max(map(len, string_text.split('Р'))), max(map(len, string_text.split('О')))))
+print(max(map(len, input().split('О'))))
 
 
 
